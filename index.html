@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+	<style>
+			nav{
+				width: 100%;height:120px;position: fixed;top:-4px;z-index: 99999;
+			}
+			.nav_t{
+				width: 100%;height:40px;background:url(static/img/J.png) no-repeat;
+				background-size: 100% 100%;position: relative;
+			}
+			.nav_t img{
+				position: absolute;left:10%;top:25%;
+			}
+			.tm{
+				height: 200px;
+			}
+			.nav_b{
+				width: 100%;height:80px;background:url(static/img/G.png) no-repeat;
+				background-size: 100% 100%;
+				text-align: center;color: white;font-size:20px;line-height: 80px;
+			}
+			.cont_bg{
+				width: 100%;background:url(static/img/home-bg.png) no-repeat;
+				background-size: 100% 100%;
+			}
+			
+			.logo{
+				width: 150px;height: 150px;background: url(static/img/icon.png) no-repeat;background-size: 100% 100%;
+				margin:20px auto;
+			}
+			.info{
+				background:rgba(0,0,0,.3);
+				color: white;margin: 0 auto;padding: 10px 10px;
+				letter-spacing: 4px;font-size: 14px;color: #CCCCCC;
+			}
+			.a img{
+				margin:50px 0 20px 0;
+			}
+			.b img{
+				margin:50px 0 100px 0;
+			}
+			.a{
+				text-align: center;
+			}
+			.b{
+				text-align: center;
+			}
+			footer{
+				width: 100%;height:134px;background:black;
+			}
+			.foot-t{
+				width: 100%;height:60px;text-align: right;padding-right: 60px;
+			}
+			.foot-b{
+				width: 100%;height:74px;text-align: center;
+			}
+			.foot-b p{
+				color: #CCCCCC;
+			}
+			.foot-t a{
+				color:#CCCCCC; line-height:60px;margin: 0 20px;
+			}
+	</style>
+	<body>
+		<nav>
+			<div class="nav_t">
+				<img src="static/img/logo.png"/>
+			</div>
+			<div class="nav_b">
+				<p>产品名字</p>
+			</div>
+		</nav>
+		<div class="cont_bg">
+			<div class="container">
+				<div class="row">
+			      <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+			      		<div class="tm"></div>
+			      </div>  
+			   </div>
+			   <div class="row">
+			      <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+			      		<div class="logo"></div>
+			      </div>  
+			   </div>
+			    <div class="row">
+				      <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+				      		<div class="info">
+				      			
+				      		</div>
+				      </div>  
+			   </div>
+			   <div class="row">
+				      <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12 a"><img src="static/img/a.png"/></div>
+				      <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12 b"><img src="static/img/b.png"/></div>  
+			   </div>
+			</div>
+		</div>
+		<footer>
+			<div class="foot-t">
+				<a href="/host3/yszc.html">隱私政策</a>
+				<a href="/host3/lxwm.html">聯繫我們</a>
+			</div>
+			<div class="foot-b">
+				<p>Copyright&nbsp;&nbsp;&nbsp;&nbsp;© 2012-2015&nbsp;&nbsp;www.chunyun.com&nbsp;&nbsp;蜀ICP备13222270号-4</p>	
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript" src="static/js/jquery-3.2.1.min.js" ></script>
+<script type="text/javascript" src="static/js/bootstrap.min.js" ></script>
+<script>
+	$.ajax({
+		type:"get",
+		url:"static/data/data.json",
+		success:function(data){
+			console.log(data[0].value)
+			$('.info').html(data[0].value)
+		}
+	});
+</script>
